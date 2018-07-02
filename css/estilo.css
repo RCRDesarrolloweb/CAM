@@ -3,6 +3,17 @@ body {
       line-height: 1.8;
       color: #818181;
   }
+  .caracteristica-s{
+    border:0.1em gray;  
+    border-bottom-style: solid;
+
+  }
+  #pricing{
+    
+    border:1em #f4511e;
+    border-top-style: solid;
+    border-bottom-style: solid;
+  }
   .Planes{
     font-size: 26px;
   }
