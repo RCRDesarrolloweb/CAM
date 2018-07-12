@@ -121,7 +121,7 @@ body {
   }
   .navbar {
       margin-bottom: 0;
-      background: linear-gradient(black,violet,black);
+      background-color: #f4511e;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
