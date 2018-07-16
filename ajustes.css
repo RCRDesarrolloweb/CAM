@@ -1,0 +1,8 @@
+.jumbotron {
+    background: url(ACAM.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
