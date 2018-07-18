@@ -7,3 +7,10 @@
 
   }
  
+@media (max-width: 700px) { 
+
+	.jumbotron{
+
+		margin-top: 20%;
+	}
+ }
