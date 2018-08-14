@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
   <link rel="stylesheet" type="text/css" href="ajustes.css">
   
@@ -21,43 +23,42 @@
 <nav class="navbar navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-default navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button style="position: relative; top: 14px;" type="button" class="navbar-default navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <i class="glyphicon glyphicon-th-list"></i>                       
       </button>
-      <i><img style="max-width: 90px; margin-top: 0px;" src="cam.png"></i>
+      <i><img style="max-width: 80px; padding: 0px;" src="cam.png"></i>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li style="position: relative; top: 14px;" ><a href="#about">Sobre Nosotros</a></li>
-        <li style="position: relative; top: 14px;"><a href="#services">Servicios</a></li>
-        <li style="position: relative; top: 14px;"><a href="#Planes">Planes</a></li>
-        <li style="position: relative; top: 14px;"><a href="#Contacto">Contacto</a></li>
+        <li style="position: relative; top: 14px;" ><a data-toggle="collapse" data-target="#about" href="#about">Sobre Nosotros</a></li>
+        <li style="position: relative; top: 14px;"><a data-toggle="collapse" data-target="#services" href="#services">Servicios</a></li>
+        <li style="position: relative; top: 14px;"><a data-toggle="collapse" data-target="#Planes" href="#Planes">Planes</a></li>
+        <li style="position: relative; top: 14px;"><a data-toggle="collapse" data-target="#contact" href="#contact">Contacto</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <div class=""></div>
 <div class="jumbotron text-center" >
-<img style="background-size: contain; max-width:100%;" src="ACAM.png">
-  
+<img style="background-size: contain; max-width:100%;" src="ACAM.png"> 
 </div>
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!--SOBRE NOSOTROS -->
+<div id="about" class="container-fluid collapse " > 
   <div class="row">
     <div class="col-sm-8">
       <h2> Aficionados a la Excelencia</h2><br>
-      <h4 style="text-align: justify;" >En CAM nos interesa no solo ofrecerte los mejores servicios si no la mejor forma de emplearlos, con nuestro sistema de pago por porcentaje realizado en el proyecto la preocupación en eficiencia de estos es cosa del pasado. Cada plan o servicio que desees comprar lo podrás ir supervisando en tiempo real en un repositorio de desarrollador ubicado en github, una plataforma que te permite subir gratuitamente archivos para visualizarlos en sus servidores y tener una buena idea de como se verá al final del encargo.  </p>
-      <br>
+      <h4 style="text-align: justify;">En CAM nos interesa no solo ofrecerte los mejores servicios si no la mejor forma de emplearlos, con nuestro sistema de pago por porcentaje realizado en el proyecto la preocupación en eficiencia de estos es cosa del pasado. Cada plan o servicio que desees comprar lo podrás ir supervisando en tiempo real en un repositorio de desarrollador ubicado en github, una plataforma que te permite subir gratuitamente archivos para visualizarlos en sus servidores y tener una buena idea de como se verá al final del encargo.  </p>
     </div>
+    <br>  
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
     </div>
   </div>
-</div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
+
+<div class="container-fluid ">
+   
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
     </div>
@@ -68,9 +69,9 @@
     </div>
   </div>
 </div>
-
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
+</div>
+<!--SERVICIOS-->
+<div id="services" class="container-fluid text-center collapse">
   <h2>Servicios</h2>
   <h4>¿Que ofrecemos?</h4>
   <br>
@@ -96,8 +97,8 @@
    
   </div>
 </div>
-
-<div id="Planes">
+<!--Planes-->
+<div id="Planes" class="collapse">
   <br>
   <br>
 <div class="text-center"><h2>Planes</h2></div>
@@ -137,7 +138,7 @@
         </div>
         <div class="panel-footer">
           <h3>360$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>     
@@ -162,7 +163,7 @@
         </div>
         <div class="panel-footer">
           <h3>500$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>       
@@ -187,7 +188,7 @@
         </div>
         <div class="panel-footer">
           <h3>700$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>    
@@ -227,7 +228,7 @@
         </div>
         <div class="panel-footer">
           <h3>250$</h3>
-        <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>     
@@ -248,7 +249,7 @@
         </div>
         <div class="panel-footer">
           <h3>500$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>       
@@ -268,7 +269,7 @@
         </div>
         <div class="panel-footer">
           <h3>1000$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>    
@@ -305,7 +306,7 @@
         </div>
         <div class="panel-footer">
           <h3>700$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>     
@@ -321,7 +322,7 @@
         </div>
         <div class="panel-footer">
           <h3>200$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>       
@@ -338,7 +339,7 @@
         </div>
         <div class="panel-footer">
           <h3>1500$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>    
@@ -373,7 +374,7 @@
         </div>
         <div class="panel-footer">
           <h3>400$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>     
@@ -392,7 +393,7 @@
         </div>
         <div class="panel-footer">
           <h3>600$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>       
@@ -409,7 +410,7 @@
         </div>
         <div class="panel-footer">
           <h3>800$</h3>
-          <a href="#Contacto"><button class="btn btn-lg">Solicitar Cotización</button></a>
+          <button class="btn btn-lg">Solicitar Cotización</button>
         </div>
       </div>      
     </div>    
@@ -421,127 +422,46 @@
    <!-- Fin De Aplicaciones -->
 </section>
  </div> 
-</div> 
-  <h2 class="text-center">Opiniones sobre nuestros trabajos</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"Esta compañía es la mejor. Estoy muy feliz con los resultados! Admirables."<br><span>Michael Roe, Vice President</s<br><br>
-      </div>
-      <div class="item">
-        <h4>"Una sola palabra solo hace falta para describir a este maravilloso equipo... WOW!! "<br><span>John Doe, Salesman, Rep Inc</span></h4>
-      </div>
-      <div class="item">
-        <h4>"¿Que estas esperando para vivir la experiencia de estar trabajando con ellos?"<br><span>Chandler B, Actor, FriendsAlot</span></h4>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+</div>  
   </div>
 </div>
 
-<!-- Container (Contact Section) -->
-<div id="Contacto" class="container-fluid bg-grey">
-  <br>  
+<!--CONTACTO-->
+<div id="contact" class="container-fluid bg-grey collapse">
   <h2 class="text-center">Contacto</h2>
   <div class="row">
-    <div style="max-width:25em; boo"  class="col-sm-5 text-justify">
-      <p>Comuniquese con nosotros por medio de un correo con todas las especificaciones o por medio del formulario aquí mostrado y nos pondremos en contacto con usted dentro de las siguientes 24 horas.</p>
+    <div style="max-width:25em;"  class="col-sm-5">
+      <p>Comuniquese con nosotros y nos pondremos en contacto con usted dentro de las siguientes 24 horas.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Caracas, Venezuela</p>
       <p><span class="glyphicon glyphicon-phone"></span> +58-416-2220238</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> campracticalsolutions@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>cam.newservices@gmail.com</p>
     </div>
-    <form method="post" onsubmit="return EnviarPedido()" name="Pedido">
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="nombre" name="name" placeholder="Nombre del Solicitante" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="RIF" name="RIF" placeholder="RIF" type="text" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="Direccion" name="Direccion" placeholder="Dirección del Solicitante" type="text" required>
+          <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Correo Electrónico" type="email" required>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="Telefono" name="Telefono" placeholder="Telefono de Contacto" type="number" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <select  class="form-control" id="SDWebs" name="SDWeb"
-          type="radio">
-          <option>--Servicio Web--</option value="null">
-          <option>Pack Profesional </option value="Profesional ">
-          <option>Pack Empresas </option value="Empresas ">
-          <option>Pack Web de Alto Nivel </option value="Web Alto Nivel ">
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 form-group">
-           <select  class="form-control" id="SPWeb" name="SPWeb"
-          type="radio">
-          <option>--Servicio Programacion Web--</option value="null">
-          <option>Base de Datos(Sencilla) </option value="BaseDS ">
-          <option>Base de Datos(Avanzada) </option value="BaseDA ">
-          <option>Tienda Online </option value="Tienda Online ">
-          </select>
-        </div>
-        <div class="col-sm-6 form-group">
-          <select  class="form-control" id="SMWeb" name="SMWeb"
-          type="radio">
-          <option>--Servicio Branding--</option value="null">
-          <option>Imagen Corporativa </option value="Imagen Corporativa ">
-          <option>Community Manager</option value="Community Manager ">
-          <option>Emprendimiento Asegurado</option value="Emprendimiento Asegurado ">
-          </select>
-
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Indique todos los detalles de la web que desea incluyendo links de refrencia hacia otras websites para tener una mejor visión de sus ideas." rows="5"></textarea><br>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentarios" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Enviar</button>
+          <button onclick="EnviarPedido()" class="btn btn-default pull-right" type="submit">Enviar</button>
         </div>
       </div>
     </div>
-    </form>
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <nav class="navbar navbar-fixed-bottom">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  
-  <p style="color: white;">Todos los derechos reservados por CAM ©2018 </p>
-   </nav>
+
+<footer class="navbar navbar-sticky-bottom text-center">
+  <p>Todos los derechos reservados por CAM ©2018</p>
 </footer>
 
 <script type="text/javascript" src="js/Javascript.js">
+
 </script>
 
 
