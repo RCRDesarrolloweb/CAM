@@ -68,8 +68,8 @@ docRef.get().then(function(doc) {
     Direccion:Direccion,
     email:email,
     Telefono:Telefono,
-    Servicios:Servicios
-    Especificaciones: Comentarios;
+    Servicios:Servicios,
+    Especificaciones: Comentarios
 
 
 })
