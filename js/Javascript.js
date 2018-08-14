@@ -52,24 +52,10 @@ var RIF = document.Pedido.RIF.value;
 var Direccion = document.Pedido.Direccion.value;
 var email = document.Pedido.email.value;
 var Telefono = document.Pedido.Telefono.value;
-var Servicios = "asds";
+var Servicios = document.Pedido.SDWeb.value + ',' + document.Pedido.SPWeb.value + ','+document.Pedido.SMWeb.value;
 var Comentarios= document.Pedido.comments.value;
 var docRef = db.collection("Pedidos").doc(Nombre);
 var dataen ='name='+Nombre+'&RIF=' + RIF+'&Direccion=' + Direccion+'&email=' +email+'&Telefono=' +Telefono +'&comments='+ Comentarios;
-alert(Nombre);
-$.ajax({
-      type:'post',
-      url:'mail.php',
-      data:dataen,
-      sucess:function(resp) {
-      
-      }
-
-
-    });
-  
-
-
 
 docRef.get().then(function(doc) {
     if (doc.exists) {
