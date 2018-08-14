@@ -59,7 +59,7 @@ var dataen ='name='+Nombre+'&RIF=' + RIF+'&Direccion=' + Direccion+'&email=' +em
 alert(Nombre);
 $.ajax({
       type:'post',
-      url:'envio.php',
+      url:'mail.php',
       data:dataen,
       sucess:function(resp) {
       
