@@ -32,3 +32,72 @@ $(document).ready(function(){
     });
   });
 })
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBfRW-YYR7PlxaAPpF0m146ys_oPofI-FY",
+    authDomain: "cam-servicios.firebaseapp.com",
+    databaseURL: "https://cam-servicios.firebaseio.com",
+    projectId: "cam-servicios",
+    storageBucket: "cam-servicios.appspot.com",
+    messagingSenderId: "184890645319"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.firestore();
+// Add a new document in collection "cities"
+function EnviarPedido() {
+
+var Nombre = document.Pedido.name.value;
+var RIF = document.Pedido.RIF.value;
+var Direccion = document.Pedido.Direccion.value;
+var email = document.Pedido.email.value;
+var Telefono = document.Pedido.Telefono.value;
+var Servicios = "asds";
+var Comentarios= document.Pedido.comments.value;
+var docRef = db.collection("Pedidos").doc(Nombre);
+var dataen ='name='+Nombre+'&RIF=' + RIF+'&Direccion=' + Direccion+'&email=' +email+'&Telefono=' +Telefono +'&comments='+ Comentarios;
+alert(Nombre);
+$.ajax({
+      type:'post',
+      url:'envio.php',
+      data:dataen,
+      sucess:function(resp) {
+      
+      }
+
+
+    });
+  
+
+
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        alert('Ya has enviado una solicitud de servicio');
+    } else {
+        // doc.data() will be undefined in this case
+        db.collection("Pedidos").doc(Nombre).set({
+    Nombre:Nombre,
+    RIF:RIF,
+    Direccion:Direccion,
+    email:email,
+    Telefono:Telefono,
+    Servicios:Servicios
+
+
+})
+.then(function() {
+    console.log("Document successfully written!");
+    alert('Pedido solicitado con exito');
+})
+.catch(function(error) {
+    console.error("Error writing document: ", error);
+    alert('Hubo un error en el envío del pedido');
+});
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+    alert('Hubo un error en el envío del pedido');
+});
+  return false;
+}
