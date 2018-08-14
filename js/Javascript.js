@@ -69,6 +69,7 @@ docRef.get().then(function(doc) {
     email:email,
     Telefono:Telefono,
     Servicios:Servicios
+    Especificaciones: Comentarios;
 
 
 })
