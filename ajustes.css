@@ -1,5 +1,5 @@
 .jumbotron {
-	margin-top: 1px;
+
       background-repeat: no-repeat;
       color: #fff;
       font-family: Montserrat, sans-serif;
@@ -11,10 +11,13 @@
 
 	.jumbotron{
 		background-color: black;
-		margin-top: 20%;
+		margin-top: 100px;
 	}
+  #about,#services,#Planes,#Contacto{
+    margin-top: 50px;
+  }
  }
- footer p{ position: relative; margin-top: 1.5%; color:white; }
+ footer p{ position: relative; color:white; }
  footer{
  	max-height:20px;
  }
