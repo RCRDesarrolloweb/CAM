@@ -61,6 +61,7 @@ docRef.get().then(function(doc) {
     if (doc.exists) {
         alert('Ya has enviado una solicitud de servicio');
     } else {
+      
         // doc.data() will be undefined in this case
         db.collection("Pedidos").doc(Nombre).set({
     Nombre:Nombre,
@@ -69,7 +70,11 @@ docRef.get().then(function(doc) {
     email:email,
     Telefono:Telefono,
     Servicios:Servicios,
-    Especificaciones: Comentarios
+    Especificaciones:Comentarios,
+    Porcentaje:"0%",
+    Pago:"Sin definir",
+    Desarrollo:"Sin empezar",
+    Link:"Aún no creado",
 
 
 })
@@ -88,3 +93,48 @@ docRef.get().then(function(doc) {
 });
   return false;
 }
+//Consulta A la Base de Datos
+i = ["NombreS","ServicioS","Desarrollo","Pago","Porcentaje","Link"];
+function consultar() {
+            document.getElementById(i[0]).value = "";
+            document.getElementById(i[1]).value = "";
+            document.getElementById(i[2]).value = "";
+            document.getElementById(i[3]).value = "";
+            document.getElementById(i[4]).value = "";
+            document.getElementById(i[5]).value = "";
+var RIFC = document.getElementById('RIFC').value;
+
+db.collection("Pedidos").where("RIF", "==", RIFC)
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            console.log(doc);
+             // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            var A = doc.data();
+            Condicion = A.Nombre;
+            document.getElementById(i[0]).value = A.Nombre;
+            document.getElementById(i[1]).value = A.Servicios;
+            document.getElementById(i[2]).value = A.Desarrollo;
+            document.getElementById(i[3]).value = A.Pago;
+            document.getElementById(i[4]).value = A.Porcentaje;
+            document.getElementById(i[5]).value = A.Link;
+            
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+           
+    });
+    window.setTimeout(function Validar0() {
+    
+      
+      if (document.getElementById(i[0]).value=="") {
+        alert('El RIF ingresado no se encuentra registrado en nuestras solicitudes');
+      }
+      },5000);
+      
+      
+    }
+        
+

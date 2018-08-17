@@ -529,9 +529,55 @@
         <div class="col-sm-12 form-group">
           <button class="btn btn-default pull-right" type="submit">Enviar</button>
         </div>
+     </form>
       </div>
+      <div  id="collapse"> 
+      <a class="btn btn-default" data-toggle="collapse" data-target="#Consultar" onclick="consultar()"  href="#Consultar">Consultar Proceso</a>
+      </div>
+      <div class="row" >
+            <div class="col-sm-12 form-group">
+                <input class="form-control" id="RIFC" name="RIFC" placeholder="Introduce el RIF registrado" type="text">
+            </div>    
+
+      <div class="panel-footer collapse" id="Consultar">
+                      <div class="row" >
+               <div class="col-sm-6 form-group">
+                <label for="NombreS">Nombre del Solicitante</label>
+                <input disabled class="form-control" id="NombreS" name="NombreS">
+              </div>
+                
+                <div class="col-sm-6 form-group">
+                  <label for="ServicioS">Servicios Solicitados</label>
+                  <textarea disabled class="form-control" id="ServicioS" name="ServicioS" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="row" >
+                <div class="col-sm-6 form-group">
+                  <label for="Desarrollo">Trabajando en:</label>
+                <input disabled class="form-control" id="Desarrollo" name="Desarrollo"  type="text">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="Pago">Siguiente Monto a Pagar</label>
+                <input disabled class="form-control" id="Pago" name="Pago" type="text">
+              </div>
+            </div>  
+            <div class="row" >
+                <div class="col-sm-6 form-group">
+              <label for="Porcentaje">Servicio Realizado al:</label>
+                <input disabled class="form-control" id="Porcentaje" name="Porcentaje" type="text">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="Link">Link de Monitoreo </label>
+                <input disabled class="form-control" id="Link" name="Link" type="text">
+              </div>
+            </div> 
+      
+                
+            </div>
+
+          </div>
+       </div>    
     </div>
-    </form>
   </div>
 </div>
 
